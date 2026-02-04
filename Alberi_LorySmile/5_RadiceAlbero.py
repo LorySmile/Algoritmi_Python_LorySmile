@@ -17,7 +17,7 @@ def trova_radice(tree):
 # Esempio di utilizzo
 
 radice = trova_radice(non_binary_tree)
-print("La radice dell'albero è", radice)  # Output: La radice dell'albero è A
+print("La radice dell'albero non binario (sapendo i padri) è", radice)  # Output: La radice dell'albero è A
 
 # Spiegazione:
 # 1. La funzione trova_radice prende un albero rappresentato come dizionario come input.
@@ -52,4 +52,37 @@ def trova_radice_binario(tree):
 # Esempio di utilizzo
 radice_binario = trova_radice_binario(binary_tree)
 print("La radice dell'albero binario è", radice_binario)  # Output: La radice dell'albero binario è A
+
+# Se non ho il padre, trova_radice, per un albero non binario, sarà: ____________________________________________
+
+non_binary_tree_1 = {
+    'A': ['B', 'C', 'D'],
+    'B': ['E', 'F'],
+    'C': [],
+    'D': ['G'],
+    'E': [],
+    'F': [],
+    'G': []
+}
+
+def altezza_non_binario_f(non_binary_tree_1, nodo):
+    if nodo not in non_binary_tree_1:
+        return -1
+    if not non_binary_tree_1[nodo]:          # nodo foglia
+        return 0
+    return 1 + max(altezza_non_binario_f(non_binary_tree_1, child) for child in non_binary_tree_1[nodo])
+
+def trova_radice_f(non_binary_tree_1):
+    figli = set()
+    for lista_figli in non_binary_tree_1.values():
+        figli.update(lista_figli)
+    for nodo in non_binary_tree_1:
+        if nodo not in figli:
+            return nodo
+
+# Esempio di utilizzo
+radice_non_binario = trova_radice_f(non_binary_tree_1)
+print("La radice dell'albero non binario (per figli) è", radice_non_binario)  # Output: La radice dell'albero binario è A
+
+
 
