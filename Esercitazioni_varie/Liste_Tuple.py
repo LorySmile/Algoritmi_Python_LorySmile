@@ -1,4 +1,4 @@
-# Liste:
+# Liste: ----------------------------------------------------------------------------------------------------
 numerica = [1, 2, 3, 4, 5]
 nomi = ["Lorenza", "Ludovica", "Paolo", "Fabrizio"]
 mista = ["Luna", 3.14, False, 5]
@@ -112,7 +112,7 @@ for riga in matrice:
         print(elemento,end="")
     print()
 
-# Tuple (non modificabili):
+# Tuple (non modificabili): ------------------------------------------------------------------------------
 coordinate = (10, 20)
 colori = "rosso", "verde", "blu"
 singola = (42,)                     # virgola obbligatoria per tuple di un elemento

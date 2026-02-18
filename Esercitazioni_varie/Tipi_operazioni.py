@@ -114,8 +114,8 @@ print("Make", "up", sep="-")            # Make-up (mette il separatore - tra le 
 print("Ciao ciao.", end="")             # stampa e non va a capo
 
 # Input:
-nome = input("Come ti chiami?")         # restituisce sempre una stringa
-eta = int(input("Quanti anni hai?"))    # converte l'input subito in int
+nome = input("Come ti chiami? ")         # restituisce sempre una stringa
+eta = int(input("Quanti anni hai? "))    # converte l'input subito in int
 
 
 

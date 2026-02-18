@@ -222,34 +222,3 @@ for i in range(len(matrice)):
         print(f"Matrice[{i}][{j}]: {matrice[i][j]}")
 
 
-# WHILE - LOOP - Cicli Condizionali : -----------------------------------------
-
-# While base (attenzione ai loop infiniti, usare break se serve)
-count = 0
-while count < 5 :
-    print(count)
-    count += 1        # 0 1 2 3 4
-
-# While con input
-while True:
-    risp = input("Inserisci un numero: ")
-    if risp.isdigit():
-        num = int(risp)
-        break
-    else:
-        print("Non valido, riprova.")
-
-# Password
-tentativi = 3
-while tentativi > 0 :
-    password = input("Password: ")
-    if password == "Python123" :
-        print("Accesso Consentito!")
-        break
-    else:
-        tentativi -= 1
-        if tentativi == 0 :
-            print(f"Sbagliato! Hai finito i tentativi!")
-        else:    
-            print(f"Sbagliato! Hai ancora {tentativi} tentativi.")
-        
