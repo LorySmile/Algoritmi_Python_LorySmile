@@ -21,6 +21,6 @@ while tentativi < 3:
         print("Accesso consentito")
         break
     tentativi += 1
-    print("Sbagliato! Hai ancora {tentativi} tentativi!")   # se non c'è break
+    print(f"Sbagliato! Hai ancora {tentativi} tentativi!")   # se non c'è break
 else:
     print("Troppi tentativi falliti")   # se non c'è break
