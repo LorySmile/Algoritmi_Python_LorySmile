@@ -11,3 +11,11 @@ while nume > 0 :
     somma += cifra
     nume //= 10
 print(f"La somma delle cifre del numero 98765 è {somma}.")
+
+# Somma Cifre con definizione di Funzione
+def somma_cifre(n):
+    print(sum(int(cifra) for cifra in n))
+
+print(f"La somma delle cifre del numero è:", end=" ")
+somma_cifre("123")
+
