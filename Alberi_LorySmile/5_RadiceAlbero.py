@@ -49,6 +49,15 @@ def trova_radice_binario(tree):
         if tree[nodo]['parent'] is None:
             return nodo
         
+"""
+oppure:
+-------------------------
+def radice(tree):
+    radici = [nodo for nodo in tree if tree[nodo]['parent'] is None]
+    return radici[0]
+    
+"""
+        
 # Esempio di utilizzo
 radice_binario = trova_radice_binario(binary_tree)
 print("La radice dell'albero binario è", radice_binario)  # Output: La radice dell'albero binario è A

@@ -155,11 +155,20 @@ print(conteggio)  # Counter({'e': 5, 'd': 4, 'c': 3, 'b': 2, 'a': 1})
 print(conteggio['e'])  # 5
 print(conteggio.most_common(2))  # [('e', 5), ('d', 4)]
 
+# esempio
+from collections import Counter
+testo = "aabbcc"
+c = Counter(testo)
+print(c)  # Counter({'a': 2, 'b': 2, 'c': 2})
+
 # Esempio pratico
 numeri = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
 freq = Counter(numeri)
 print(freq[3])  # 3
 print(freq.most_common(1))  # [(4, 4)] - elemento più frequente
+
+# esempio
+c.most_common(1)  # restituisce i primi 1 elementi più comuni
 
 # defaultdict - dizionario con valori di default
 d = defaultdict(int)  # default = 0

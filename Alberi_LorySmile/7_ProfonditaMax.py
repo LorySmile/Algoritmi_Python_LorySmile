@@ -58,6 +58,15 @@ def trova_radice_binario(tree):
     for nodo in tree:
         if tree[nodo]['parent'] is None:
             return nodo
+        
+"""
+oppure:
+----------------------
+def radice(tree):
+    radici = [nodo for nodo in tree if tree[nodo]['parent'] is None]
+    return radici[0]
+    
+"""
 
 def profondita_max_binario(tree):
     root = trova_radice_binario(tree)

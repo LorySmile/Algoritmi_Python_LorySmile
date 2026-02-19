@@ -2,19 +2,13 @@
 
 def bubble_sort(arr):
     n = len(arr)
-    # Ciclo attraverso tutti gli elementi dell'array
-    for i in range(n):
-        # Flag per verificare se è avvenuto uno scambio
-        swapped = False
-        # Ultimi i elementi sono già ordinati, quindi non li consideriamo
-        for j in range(0, n - i - 1):
-            # Confronta l'elemento corrente con il successivo
-            if arr[j] > arr[j + 1]:
-                # Scambia se l'elemento corrente è maggiore del successivo
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                swapped = True
-        # Se non ci sono stati scambi, l'array è già ordinato
-        if not swapped:
+    for i in range(n):                     # Ciclo attraverso tutti gli elementi dell'array
+        swapped = False                    # Flag per verificare se è avvenuto uno scambio
+        for j in range(0, n - i - 1):      # Ultimi i elementi sono già ordinati, quindi non li consideriamo
+            if arr[j] > arr[j + 1]:                           # Confronta l'elemento corrente con il successivo
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]       # Scambia se l'elemento corrente è maggiore del successivo
+                swapped = True                                 
+        if not swapped:               # Se non ci sono stati scambi, l'array è già ordinato
             break
     return arr
 

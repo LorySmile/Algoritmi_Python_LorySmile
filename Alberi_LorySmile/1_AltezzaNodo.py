@@ -9,7 +9,7 @@ tree = {
 
 def altezza(tree, nodo):
     if nodo is None:
-        return -1  # caso base: nodo nullo
+        return -1                                   # caso base: nodo nullo
     left = tree[nodo]['left']                       # è un dizionario che rappresenta l'albero
     right = tree[nodo]['right']                     # accediamo ai figli sinistro e destro
     return 1 + max(altezza(tree, left), altezza(tree, right))

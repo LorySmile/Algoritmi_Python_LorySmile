@@ -9,7 +9,7 @@ tree = {
 
 def conta_nodi(tree, nodo):
     if nodo is None:
-        return 0    # caso base: nodo nullo
+        return 0                                # caso base: nodo nullo
     left = tree[nodo]['left']                   # è un dizionario che rappresenta l'albero
     right = tree[nodo]['right']                 # accediamo ai figli sinistro e destro
     return 1 + conta_nodi(tree, left) + conta_nodi(tree, right) 
